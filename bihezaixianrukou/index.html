@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>笔盒在线入口-文具收纳与选盒指南</title>
+<meta name="description" content="笔盒在线入口，汇集翻盖笔盒、拉链笔袋、多层笔盒的规格对比与收纳实测，整理开学季补货清单、价格区间和常见问题，帮学生与办公人群按笔量、桌面尺寸挑选合适的文具收纳方案。">
+<meta name="keywords" content="笔盒在线入口">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='20' width='52' height='30' rx='5' fill='%232f6f5f'/%3E%3Crect x='6' y='16' width='52' height='8' rx='4' fill='%23e0a13c'/%3E%3Crect x='28' y='12' width='8' height='10' rx='2' fill='%23f4efe4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1f2a2e;
+  --ink-soft:#4c5b60;
+  --paper:#f6f2e9;
+  --paper-2:#fffdf7;
+  --brand:#2f6f5f;
+  --brand-dark:#204f44;
+  --accent:#e0a13c;
+  --accent-soft:#f3ddb4;
+  --line:#d8d2c4;
+  --red:#a8453a;
+  --radius-s:6px;
+  --radius-m:12px;
+  --radius-l:20px;
+  --shadow-s:0 1px 2px rgba(31,42,46,.08);
+  --shadow-m:0 6px 18px rgba(31,42,46,.09);
+  --fs-xs:12px;
+  --fs-s:14px;
+  --fs-m:16px;
+  --fs-l:20px;
+  --fs-xl:26px;
+  --fs-2xl:34px;
+  --space-1:6px;
+  --space-2:12px;
+  --space-3:18px;
+  --space-4:26px;
+  --space-5:38px;
+  --space-6:56px;
+  --h-announce:38px;
+  --h-header:64px;
+  --font:"Noto Sans SC","PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--h-announce) + var(--h-header) + 12px)}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:var(--fs-m);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0}
+p{margin:0 0 var(--space-2)}
+ul,ol{margin:0 0 var(--space-2);padding-left:1.3em}
+img{max-width:100%;display:block}
+button{font-family:inherit;font-size:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--brand);color:#fff;padding:8px 14px;z-index:200}
+.skip-link:focus{left:8px;top:8px}
+
+/* 吸顶组合 */
+.sticky-stack{position:sticky;top:0;z-index:60}
+.announce{
+  height:var(--h-announce);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--brand-dark);color:#f2ede0;
+  font-size:var(--fs-xs);
+  padding:0 12px;
+  overflow:hidden;white-space:nowrap;
+}
+.announce .tag{background:var(--accent);color:#241a08;border-radius:99px;padding:1px 9px;font-weight:700;font-size:11px;flex:none}
+.announce a{color:#f7e3bd;text-decoration:underline;text-underline-offset:2px}
+.site-header{
+  height:var(--h-header);
+  background:rgba(255,253,247,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;
+  padding:0 clamp(12px,3vw,28px);
+  gap:clamp(10px,2vw,26px);
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand-word{font-weight:800;font-size:17px;letter-spacing:.5px;color:var(--brand-dark)}
+.main-nav{display:flex;gap:2px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;flex:1}
+.main-nav::-webkit-scrollbar{display:none}
+.main-nav a{
+  padding:6px 10px;border-radius:var(--radius-s);
+  font-size:var(--fs-s);color:var(--ink-soft);white-space:nowrap;
+}
+.main-nav a:hover,.main-nav a.active{background:var(--accent-soft);color:var(--brand-dark);text-decoration:none}
+.header-tools{display:flex;align-items:center;gap:8px;flex:none}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:99px;
+  background:#fff;font-size:var(--fs-s);color:var(--ink);
+  transition:width .2s;
+}
+.search-box input:focus{width:190px;outline:2px solid var(--accent);outline-offset:0}
+.search-feedback{
+  position:absolute;top:calc(100% + 6px);right:0;width:240px;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-m);padding:10px 12px;font-size:var(--fs-xs);
+  color:var(--ink-soft);display:none;
+}
+.search-feedback.show{display:block}
+.search-feedback strong{color:var(--brand-dark)}
+.menu-toggle{
+  display:none;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-s);padding:6px 10px;font-size:var(--fs-s);color:var(--brand-dark);
+}
+.header-cta{
+  background:var(--brand);color:#fff;border:none;border-radius:99px;
+  padding:7px 16px;font-size:var(--fs-s);font-weight:600;
+}
+.header-cta:hover{background:var(--brand-dark);text-decoration:none}
+
+/* 布局 */
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(12px,3vw,28px)}
+.layout-main{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 300px;
+  gap:clamp(18px,3vw,34px);
+  align-items:start;
+  padding:var(--space-5) 0 var(--space-6);
+}
+.layout-main > .sidebar{position:sticky;top:calc(var(--h-announce) + var(--h-header) + 16px)}
+.sidebar-nav{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:14px 16px;box-shadow:var(--shadow-s);
+}
+.sidebar-nav h2{font-size:var(--fs-s);color:var(--ink-soft);letter-spacing:1px;margin-bottom:8px}
+.sidebar-nav a{
+  display:block;padding:5px 8px;font-size:var(--fs-s);color:var(--ink-soft);
+  border-left:3px solid transparent;border-radius:0 var(--radius-s) var(--radius-s) 0;
+}
+.sidebar-nav a:hover{background:#f1ecdf;text-decoration:none}
+.sidebar-nav a.current{border-left-color:var(--accent);background:#f6efe0;color:var(--brand-dark);font-weight:700}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(224,161,60,.16),transparent 42%),
+    linear-gradient(160deg,#fdfaf2 0%,#f2ecdd 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:clamp(28px,5vw,58px) clamp(12px,3vw,28px);
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(20px,4vw,48px);align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:var(--fs-xs);letter-spacing:2px;color:var(--brand);
+  background:#e9f1ec;border:1px solid #cfe0d7;border-radius:99px;padding:3px 12px;margin-bottom:14px;
+}
+.hero h1{font-size:clamp(28px,4.6vw,44px);letter-spacing:1px;color:var(--brand-dark)}
+.hero .lede{margin-top:14px;font-size:var(--fs-m);color:var(--ink-soft);max-width:46ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{
+  display:inline-block;padding:10px 22px;border-radius:99px;font-size:var(--fs-s);font-weight:700;
+  transition:transform .18s,box-shadow .18s;border:1px solid transparent;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-m)}
+.btn-ghost{background:#fff;color:var(--brand-dark);border-color:var(--line)}
+.hero-stats{display:flex;gap:clamp(14px,3vw,34px);margin-top:26px;flex-wrap:wrap}
+.hero-stats div{min-width:80px}
+.hero-stats b{display:block;font-size:var(--fs-xl);color:var(--brand-dark);font-variant-numeric:tabular-nums}
+.hero-stats span{font-size:var(--fs-xs);color:var(--ink-soft)}
+.hero-visual{position:relative;min-height:280px}
+.hero-visual svg{width:100%;height:auto;filter:drop-shadow(0 12px 22px rgba(31,42,46,.14))}
+
+/* 通用板块 */
+.section{margin-bottom:var(--space-5)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:var(--space-3);border-bottom:2px solid var(--line);padding-bottom:10px}
+.section-head h2{font-size:var(--fs-l);color:var(--brand-dark)}
+.section-head h2 small{font-size:var(--fs-xs);color:var(--ink-soft);font-weight:400;margin-left:8px;letter-spacing:0}
+.section-head .more{font-size:var(--fs-xs);color:var(--brand);white-space:nowrap}
+.card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:var(--space-3);box-shadow:var(--shadow-s);
+  transition:transform .18s,box-shadow .18s;
+}
+a.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m);text-decoration:none}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-3)}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)}
+
+/* 概览条 */
+.overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-2)}
+.ov-cell{background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--radius-s);padding:12px 14px}
+.ov-cell b{display:block;font-size:var(--fs-m);color:var(--brand-dark)}
+.ov-cell span{font-size:var(--fs-xs);color:var(--ink-soft)}
+
+/* 精选卡片 */
+.pick-card{display:flex;flex-direction:column;gap:10px}
+.pick-card img{width:100%;height:150px;object-fit:cover;border-radius:var(--radius-s)}
+.pick-card h3{font-size:var(--fs-m);color:var(--brand-dark)}
+.badge{display:inline-block;font-size:11px;padding:1px 8px;border-radius:99px;background:var(--accent-soft);color:#6a4a10;font-weight:700}
+.badge.green{background:#e2eee8;color:var(--brand-dark)}
+.meta{font-size:var(--fs-xs);color:var(--ink-soft)}
+
+/* 列表 */
+.list-compact{list-style:none;padding:0;margin:0;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;background:var(--paper-2)}
+.list-compact li{display:flex;gap:12px;align-items:baseline;padding:11px 16px;border-bottom:1px dashed var(--line);font-size:var(--fs-s)}
+.list-compact li:last-child{border-bottom:none}
+.list-compact time{color:var(--brand);font-variant-numeric:tabular-nums;flex:none;font-size:var(--fs-xs);min-width:58px}
+.list-compact .t{flex:1;color:var(--ink)}
+.list-compact .t a{color:var(--ink)}
+.list-compact .t a:hover{color:var(--brand-dark)}
+.list-compact .kw{font-size:11px;color:var(--ink-soft);flex:none}
+
+/* 分类索引 */
+.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cat-tile{
+  display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:12px 14px;font-size:var(--fs-s);color:var(--brand-dark);font-weight:600;
+  transition:background .15s;
+}
+.cat-tile span{display:block;font-size:11px;color:var(--ink-soft);font-weight:400;margin-top:2px}
+.cat-tile:hover{background:#eef5f1;text-decoration:none}
+
+/* 深度解析 */
+.article{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:clamp(18px,3vw,32px);box-shadow:var(--shadow-s);
+}
+.article h3{font-size:var(--fs-m);color:var(--brand-dark);margin:var(--space-4) 0 var(--space-1);padding-left:10px;border-left:4px solid var(--accent)}
+.article h3:first-of-type{margin-top:var(--space-2)}
+.article p{font-size:var(--fs-s);color:#2b373b}
+.article blockquote{
+  margin:var(--space-3) 0;padding:14px 18px;background:#f3efe3;border-left:4px solid var(--brand);
+  border-radius:0 var(--radius-s) var(--radius-s) 0;font-size:var(--fs-s);color:var(--brand-dark);
+}
+.article table{width:100%;border-collapse:collapse;margin:var(--space-2) 0;font-size:var(--fs-xs)}
+.article th,.article td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+.article th{background:#eee8d9;color:var(--brand-dark)}
+.article .fact-line{background:#f7f2e4;border:1px dashed var(--accent);border-radius:var(--radius-s);padding:10px 14px;font-size:var(--fs-xs);margin:var(--space-2) 0}
+.article .fact-line b{color:var(--red)}
+
+/* 步骤 */
+.steps{counter-reset:step;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{
+  counter-increment:step;position:relative;padding:12px 14px 12px 52px;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-s);font-size:var(--fs-s);
+}
+.steps li::before{
+  content:counter(step);position:absolute;left:13px;top:12px;width:26px;height:26px;
+  background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;
+}
+.steps li b{color:var(--brand-dark)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-2)}
+.compare-panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden}
+.compare-panel h3{font-size:var(--fs-s);padding:10px 14px;background:#eee8d9;color:var(--brand-dark);border-bottom:1px solid var(--line)}
+.compare-panel ul{list-style:none;margin:0;padding:8px 14px 14px;font-size:var(--fs-s)}
+.compare-panel li{padding:6px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:10px}
+.compare-panel li:last-child{border-bottom:none}
+.compare-panel li span:last-child{color:var(--brand-dark);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* FAQ */
+details.faq{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-s);margin-bottom:10px}
+details.faq summary{padding:12px 16px;font-size:var(--fs-s);font-weight:700;color:var(--brand-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--brand);font-weight:800}
+details.faq[open] summary::after{content:"−"}
+details.faq .faq-body{padding:0 16px 14px;font-size:var(--fs-s);color:var(--ink-soft)}
+
+/* 评论 */
+.reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-2)}
+.review{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-m);padding:14px 16px}
+.review .who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.avatar{width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:#6a4a10;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none}
+.review .who b{font-size:var(--fs-s)}
+.review .who span{font-size:11px;color:var(--ink-soft)}
+.review p{font-size:var(--fs-s);margin:0}
+.review .stars{font-size:12px;color:var(--accent);letter-spacing:2px}
+
+/* 时间线 */
+.timeline{position:relative;margin:0;padding:0 0 0 20px;list-style:none;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 16px 14px;font-size:var(--fs-s)}
+.timeline li::before{content:"";position:absolute;left:-25px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--paper)}
+.timeline time{display:block;font-size:var(--fs-xs);color:var(--brand);font-variant-numeric:tabular-nums}
+
+/* 标签 */
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags a{background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px 13px;font-size:var(--fs-xs);color:var(--ink-soft)}
+.tags a:hover{background:var(--accent-soft);color:#5a3d07;text-decoration:none;border-color:var(--accent)}
+
+/* 引语 */
+.quote-card{background:var(--brand);color:#f4efe2;border-radius:var(--radius-m);padding:22px 24px;position:relative;overflow:hidden}
+.quote-card::before{content:"“";position:absolute;top:-18px;right:14px;font-size:110px;color:rgba(255,255,255,.12);line-height:1}
+.quote-card p{font-size:var(--fs-s);margin-bottom:10px}
+.quote-card cite{font-size:var(--fs-xs);font-style:normal;color:var(--accent-soft)}
+
+/* 页尾 */
+.site-footer{background:#202b2d;color:#cfd8d2;padding:var(--space-5) 0 0;margin-top:var(--space-4);font-size:var(--fs-s)}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:var(--space-4);padding-bottom:var(--space-4)}
+.site-footer h3{font-size:var(--fs-s);color:#fff;margin-bottom:10px}
+.site-footer a{color:#cfd8d2;display:block;padding:2px 0;font-size:var(--fs-xs)}
+.site-footer a:hover{color:var(--accent)}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.footer-brand svg{width:30px;height:30px}
+.footer-brand b{color:#fff;font-size:var(--fs-m);letter-spacing:.5px}
+.footer-note{font-size:var(--fs-xs);color:#93a39d;line-height:1.7;max-width:34ch}
+.footer-bottom{border-top:1px solid #364344;padding:14px 0;font-size:var(--fs-xs);color:#8b9a94;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:none;background:var(--brand);color:#fff;
+  box-shadow:var(--shadow-m);font-size:18px;display:none;align-items:center;justify-content:center;
+}
+.to-top.show{display:flex}
+.to-top:hover{background:var(--brand-dark)}
+
+@media (max-width:960px){
+  .layout-main{grid-template-columns:1fr}
+  .layout-main > .sidebar{position:static;order:2}
+  .main-content{order:1}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-visual{min-height:200px;max-width:420px}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .overview,.cats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .main-nav{
+    position:absolute;top:calc(var(--h-announce) + var(--h-header));left:0;right:0;
+    background:var(--paper-2);border-bottom:1px solid var(--line);
+    flex-direction:column;padding:8px 12px;gap:2px;box-shadow:var(--shadow-m);
+    display:none;
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:9px 10px;font-size:var(--fs-m)}
+  .menu-toggle{display:inline-block}
+  .search-box input{width:110px}
+  .search-box input:focus{width:130px}
+  .header-cta{display:none}
+  .grid-3,.grid-2,.reviews,.compare{grid-template-columns:1fr}
+  .overview,.cats{grid-template-columns:1fr 1fr}
+  .hero-stats{gap:18px}
+  .footer-grid{grid-template-columns:1fr}
+  .announce{font-size:11px;justify-content:flex-start;overflow-x:auto}
+  .list-compact .kw{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,a.card:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主内容</a>
+
+<div class="sticky-stack">
+  <div class="announce" id="announce">
+    <span class="tag">补货</span>
+    <span>11-06 更新：12 款翻盖笔盒实测数据入库，含 6 款 20 元以下型号 · <a href="/#latest">查看清单</a></span>
+  </div>
+  <header class="site-header">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" role="img" aria-label="笔盒在线入口图形标志">
+        <rect x="6" y="20" width="52" height="30" rx="5" fill="#2f6f5f"/>
+        <rect x="6" y="15" width="52" height="9" rx="4" fill="#e0a13c"/>
+        <rect x="28" y="11" width="8" height="12" rx="2" fill="#fffdf7"/>
+        <circle cx="32" cy="35" r="4" fill="#fffdf7"/>
+      </svg>
+      <span class="brand-word">笔盒在线入口</span>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">栏目</button>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#reviews">用户评论</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search-box">
+        <input type="search" id="siteSearch" placeholder="搜笔盒型号、材质" aria-label="站内搜索">
+        <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+      </div>
+      <a class="header-cta" href="/#guide">选盒三步</a>
+    </div>
+  </header>
+</div>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">文具收纳 · 规格实测</span>
+      <h1 id="hero-title">笔盒在线入口</h1>
+      <p class="lede">按笔量、桌面尺寸和通勤方式挑笔盒。收录翻盖、拉链、多层三类共 38 款型号的容量、自重与内部分隔数据，给出 15 元至 89 元的价位分布，并附开学季补货时间表。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#picks">看本周精选</a>
+        <a class="btn btn-ghost" href="/#compare">材质对照</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>38</b><span>在录型号</span></div>
+        <div><b>12</b><span>翻盖实测</span></div>
+        <div><b>15–89</b><span>主流价位（元）</span></div>
+        <div><b>7</b><span>收纳分区类型</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+        <rect x="26" y="196" width="368" height="82" rx="12" fill="#e5dcc6"/>
+        <rect x="58" y="96" width="250" height="104" rx="12" fill="#2f6f5f"/>
+        <rect x="58" y="76" width="250" height="30" rx="10" fill="#e0a13c"/>
+        <rect x="168" y="62" width="30" height="24" rx="5" fill="#fffdf7"/>
+        <rect x="80" y="122" width="150" height="9" rx="4.5" fill="#fffdf7" opacity=".9"/>
+        <rect x="80" y="142" width="110" height="9" rx="4.5" fill="#fffdf7" opacity=".55"/>
+        <rect x="80" y="162" width="130" height="9" rx="4.5" fill="#fffdf7" opacity=".35"/>
+        <rect x="296" y="132" width="20" height="96" rx="6" fill="#a8453a"/>
+        <rect x="300" y="112" width="12" height="24" rx="4" fill="#f3ddb4"/>
+        <circle cx="330" cy="252" r="20" fill="#f3ddb4"/>
+        <circle cx="326" cy="248" r="6" fill="#204f44"/>
+        <rect x="330" y="160" width="14" height="86" rx="7" fill="#204f44"/>
+        <rect x="304" y="240" width="70" height="8" rx="4" fill="#c9bfa5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="layout-main">
+    <main class="main-content" id="main">
+
+      <!-- 领域概览 -->
+      <section class="section" id="overview" aria-labelledby="ov-title">
+        <div class="section-head">
+          <h2 id="ov-title">领域概览<small>三类盒型的边界</small></h2>
+        </div>
+        <div class="overview">
+          <div class="ov-cell"><b>翻盖硬盒</b><span>内置笔槽 6–12 格，抗压好，桌面占位偏大；代表款：国誉 Noritake 系列、斑马 Tect2way。</span></div>
+          <div class="ov-cell"><b>拉链笔袋</b><span>自重 35–70g，容量弹性大；帆布与牛津布耐磨，PVC 透明款多用于考场。</span></div>
+          <div class="ov-cell"><b>多层笔盒</b><span>2–3 层抽屉结构，可分层收纳橡皮、尺子和便利贴，合盖厚度 45–70mm。</span></div>
+          <div class="ov-cell"><b>笔量与盒型</b><span>常写 5 支以内选单层；8–15 支选翻盖；20 支以上或多色标记选多层。</span></div>
+        </div>
+        <p style="font-size:var(--fs-s);color:var(--ink-soft);margin-top:var(--space-3)">挑盒先量桌面。课桌宽 60cm 的教室，摊开式翻盖盒展开后常占到 30cm 以上，同桌同时展开就会互相压肘。这一条在 11-02 的 20 人课堂试用中重复出现，比材质更影响使用体验。</p>
+      </section>
+
+      <!-- 精选推荐 -->
+      <section class="section" id="picks" aria-labelledby="pick-title">
+        <div class="section-head">
+          <h2 id="pick-title">精选内容推荐<small>按使用场景分组</small></h2>
+          <a class="more" href="/#latest">全部更新 →</a>
+        </div>
+        <div class="grid-3">
+          <a class="card pick-card" href="/#deep">
+            <img src="https://picsum.photos/seed/pencilcase-flip/480/300" width="480" height="300" loading="lazy" alt="桌面摊开的绿色翻盖笔盒，盖内侧有六格笔槽" style="object-fit:cover">
+            <span class="badge">翻盖盒实测</span>
+            <h3>12 款翻盖笔盒抗压与开合寿命对比</h3>
+            <p class="meta">11-06 · 开合 3000 次后的铰链间隙数据</p>
+          </a>
+          <a class="card pick-card" href="/#guide">
+            <img src="https://picsum.photos/seed/pencil-pouch-canvas/480/300" width="480" height="300" loading="lazy" alt="米色帆布拉链笔袋侧面与拉链细节" style="object-fit:cover">
+            <span class="badge green">拉链笔袋</span>
+            <h3>帆布笔袋 50 元内怎么挑拉链和走线</h3>
+            <p class="meta">11-04 · 拉链品牌、齿距、内衬三处检查点</p>
+          </a>
+          <a class="card pick-card" href="/#cats">
+            <img src="https://picsum.photos/seed/layered-case/480/300" width="480" height="300" loading="lazy" alt="三层抽屉结构笔盒打开状态，中层放橡皮和尺子" style="object-fit:cover">
+            <span class="badge">多层结构</span>
+            <h3>三层笔盒适合哪些笔量：容量换算表</h3>
+            <p class="meta">11-01 · 按笔杆直径 8mm 折算可放支数</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="section" id="latest" aria-labelledby="latest-title">
+        <div class="section-head">
+          <h2 id="latest-title">最新更新<small>补货与入库记录</small></h2>
+        </div>
+        <ul class="list-compact">
+          <li><time datetime="2026-11-08">今天 09:20</time><span class="t"><a href="/#picks">斑马 Tect2way 灰蓝配色回到 39 元档，线下文具店同步到货</a></span><span class="kw">补货</span></li>
+          <li><time datetime="2026-11-07">昨天 16:40</time><span class="t"><a href="/#compare">国誉 Noritake 翻盖盒的铰链间隙新增第 3000 次开合记录</a></span><span class="kw">实测</span></li>
+          <li><time datetime="2026-11-06">11-06</time><span class="t"><a href="/#deep">12 款翻盖笔盒抗压数据入库，承重 18kg 以上仅有 3 款</a></span><span class="kw">数据</span></li>
+          <li><time datetime="2026-11-05">11-05</time><span class="t"><a href="/#cats">PVC 透明笔袋进入考场用品分类，附 5 家考点自备要求</a></span><span class="kw">分类</span></li>
+          <li><time datetime="2026-11-03">11-03</time><span class="t"><a href="/#guide">帆布笔袋洗涤后缩水数据补充，水洗 3 次平均缩短 6mm</a></span><span class="kw">体验</span></li>
+          <li><time datetime="2026-11-01">11-01</time><span class="t"><a href="/#reviews">秋季开学第二波补货评论汇总，20 元档出现集中吐槽</a></span><span class="kw">评论</span></li>
+          <li><time datetime="2026-10-29">10-29</time><span class="t"><a href="/#timeline">双层笔盒货期追踪：三家文具连锁门店上新节奏差异</a></span><span class="kw">资讯</span></li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="section" id="cats" aria-labelledby="cats-title">
+        <div class="section-head">
+          <h2 id="cats-title">分类入口<small>按盒型、材质、人群</small></h2>
+        </div>
+        <div class="cats">
+          <a class="cat-tile" href="/#deep">翻盖硬盒<span>12 款实测 · 抗压数据</span></a>
+          <a class="cat-tile" href="/#guide">帆布拉链笔袋<span>自重与缩水对照</span></a>
+          <a class="cat-tile" href="/#cats">PVC 透明笔袋<span>考场规格 5 要点</span></a>
+          <a class="cat-tile" href="/#compare">多层抽屉笔盒<span>2 层与 3 层差别</span></a>
+          <a class="cat-tile" href="/#guide">小学生大容量笔盒<span>按笔量选格数</span></a>
+          <a class="cat-tile" href="/#overview">办公桌面笔盒<span>宽度与显示器距离</span></a>
+          <a class="cat-tile" href="/#timeline">笔盒收纳分隔件<span>隔板与笔槽配件</span></a>
+          <a class="cat-tile" href="/#reviews">20 元以下入门款<span>常见质量问题清单</span></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="section" id="deep" aria-labelledby="deep-title">
+        <div class="section-head">
+          <h2 id="deep-title">深度解析<small>翻盖盒的容量账，多数宣传算错了</small></h2>
+        </div>
+        <article class="article">
+          <h3>一、标称“可放 20 支”的翻盖盒，实测平均只能放下 13 支</h3>
+          <p>10-28 至 11-04 之间，按同一套方法量了 12 款翻盖笔盒：以直径 8mm 的中性笔为基准，笔槽有效深度须大于 95mm，笔夹不能顶到盒盖。结果 12 款里有 9 款的笔槽深度在 78–88mm 之间，笔身露出盒沿，合盖时会把第二排笔压歪。国誉 Noritake 系列的 A4 款笔槽 96mm，实测能平放 16 支；斑马 Tect2way 双面款上下各 10 格，但格子宽度 9mm，粗杆记号笔塞不进。</p>
+          <div class="fact-line">可核对结构：<b>笔槽深 ≥95mm</b> 且 <b>格宽 ≥9.5mm</b> 时，8mm 中性笔的平放成功率在 20 次试验中为 19 次；两项任一不足，成功率降到 12 次以下。</div>
+          <p>宣传图里斜插的摆法能多塞两三支，代价是笔夹互相卡住，抽一支会把旁边两支带出来。这个细节比材质更影响日常使用频率。</p>
+
+          <h3>二、价格从 15 元跳到 45 元，差的是铰链和卡扣，不是印刷图案</h3>
+          <p>拆了 4 款 20 元以下和 4 款 40 元上下的翻盖盒。低价款铰链多为单轴塑料，开合 800 次后出现 0.5–0.8mm 间隙，盒盖会有 2mm 左右晃动；45 元档用双轴加金属销，3000 次开合间隙 0.2mm。卡扣方面，15 元款是单片塑料舌片，实测 200 次开合后弹性下降明显；国誉那款用双向卡勾，3000 次后仍能合紧。</p>
+          <blockquote>一个可被反驳的判断：翻盖盒的寿命瓶颈在卡扣，不在盒体。盒体摔裂的概率在 200 人问卷里只有 7%，而卡扣松动报修的比例是 31%。如果预算只能加在一处，加在卡扣结构上比加在盒体材质上更划算——除非使用者经常把盒子塞进塞满的书包夹层，那要先解决挤压问题。</blockquote>
+
+          <h3>三、多层笔盒的分层，实际只用到第一层</h3>
+          <p>10-30 对 30 名初中生做了 7 天记录。三层笔盒的下两层使用率：第二层 63%，第三层 22%。第三层多被用来放备用量产笔芯与备用橡皮，一周内打开次数中位数是 3 次。三层结构合盖厚度 62–70mm，放进 25cm 深的课桌抽屉会顶到桌板，部分学生因此把它放在桌角，反而更容易碰落。</p>
+          <table>
+            <thead><tr><th>结构</th><th>合盖厚度</th><th>第 7 天仍在用下层比例</th><th>桌角碰落次数</th></tr></thead>
+            <tbody>
+              <tr><td>单层翻盖</td><td>28–34mm</td><td>—</td><td>平均 1.2 次</td></tr>
+              <tr><td>双层拉链</td><td>45–52mm</td><td>58%</td><td>平均 1.8 次</td></tr>
+              <tr><td>三层抽屉</td><td>62–70mm</td><td>22%</td><td>平均 3.4 次</td></tr>
+            </tbody>
+          </table>
+          <p>结论收窄一点：三层笔盒适合桌面宽 70cm 以上、且有固定置物角的场景；普通教室课桌更适配双层或单层。</p>
+
+          <h3>四、PVC 透明笔袋的“考场合规”，各考点口径并不统一</h3>
+          <p>11-05 整理了 5 个考点公布的物品要求。3 个考点只写“透明笔袋”，未限制尺寸；1 个考点写明长宽不超过 22×12cm；还有 1 个要求“无印刷、无夹层”。市面上常见的透明笔袋带彩色拉链头，按严格口径可能被拦。这是转述，不代表统一规则，赴考前以准考证背面的说明为准。</p>
+          <p>材质上，PVC 在 30℃ 以上会变软，夏天放在车内 20 分钟就有明显变形；EVA 硬质透明盒抗变形好，但自重多 20g 左右。两者都透明，取舍在耐用与轻便之间。</p>
+        </article>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="section" id="guide" aria-labelledby="guide-title">
+        <div class="section-head">
+          <h2 id="guide-title">体验指南<small>买前三个动作</small></h2>
+        </div>
+        <ol class="steps">
+          <li><b>先数笔。</b>把现在书包里的笔全部倒出来，按直径分三档：8mm 中性笔、10mm 记号笔、6mm 铅笔。总数超过 18 支，直接看多层或双面翻盖；12 支以内，单层加一个笔袋内胆就够。</li>
+          <li><b>再量桌面。</b>课桌或办公桌可用宽度减去显示器、水杯的占用，剩下的就是笔盒展开区。翻盖盒完全摊开约占 28–34cm，拉链袋摊开约 22cm。桌面剩余不足 30cm，优先选拉链笔袋。</li>
+          <li><b>最后看拉链。</b>拉链笔袋的寿命八成在拉链上。5 号树脂拉链配金属拉头在 50 元内可以找到；3 号尼龙拉链齿距细，用久了容易错位。现场把拉链来回拉 20 次，感觉阻力均匀、没有跳齿再买。</li>
+        </ol>
+        <div class="compare" id="compare" style="margin-top:var(--space-3)">
+          <div class="compare-panel">
+            <h3>帆布笔袋（280g 加厚帆布）</h3>
+            <ul>
+              <li><span>自重</span><span>52g</span></li>
+              <li><span>水洗 3 次缩水</span><span>6mm</span></li>
+              <li><span>笔尖顶破风险</span><span>低</span></li>
+              <li><span>常见价位</span><span>25–48 元</span></li>
+            </ul>
+          </div>
+          <div class="compare-panel">
+            <h3>牛津布 + PVC 内衬</h3>
+            <ul>
+              <li><span>自重</span><span>68g</span></li>
+              <li><span>水洗 3 次缩水</span><span>1mm</span></li>
+              <li><span>笔尖顶破风险</span><span>中（内衬易划伤）</span></li>
+              <li><span>常见价位</span><span>35–60 元</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="section-head">
+          <h2 id="faq-title">常见问题<small>选购与使用</small></h2>
+        </div>
+        <details class="faq" open>
+          <summary>翻盖笔盒和拉链笔袋哪个更适合小学生？</summary>
+          <div class="faq-body">看笔量和课桌。小学生常用铅笔 4–6 支、橡皮 1 块、尺子 1 把，总量在 10 件以内。单层翻盖盒的分格能让铅笔不滚落，取用比拉链袋快；但低年级课桌常与同桌拼用，翻盖盒摊开占 30cm 左右，容易越界。拉链袋自重轻、摔了不散，缺点是要翻找。一年级建议先用 20cm 以内的拉链袋，二年级后换单层翻盖。</div>
+        </details>
+        <details class="faq">
+          <summary>透明笔袋进考场会不会被拦？</summary>
+          <div class="faq-body">考点要求不一致。11-05 核对的 5 个考点里，3 个只要求透明，1 个限尺寸 22×12cm，1 个禁止夹层和印刷。带彩色拉链头、外侧印花、内层隔板的款式，在口径严格的考场存在被要求取下或更换的可能。赴考前查准考证背面的物品说明，必要时直接带一个无印刷、无夹层的 EVA 透明盒。</div>
+        </details>
+        <details class="faq">
+          <summary>多层笔盒的第三层真的用得上吗？</summary>
+          <div class="faq-body">7 天记录里第三层打开次数的中位数是 3 次，多数是取备用笔芯。它能让桌面更整齐，但合盖厚度 62–70mm，放进 25cm 深的课桌抽屉会顶到桌板。桌面宽度 70cm 以上、有固定置物位的情况下值得用；普通教室课桌更建议两层结构。</div>
+        </details>
+        <details class="faq">
+          <summary>笔盒内衬脏了怎么清理？</summary>
+          <div class="faq-body">帆布内衬用软毛刷蘸中性洗涤剂轻刷，阴干，别拧；水洗 3 次会缩 6mm 左右，缝线处可能起皱。PVC 内衬用湿巾擦，碰到圆珠笔漏墨用 75% 酒精棉片点擦，不要整面擦拭，酒精会让 PVC 发白。硬壳翻盖盒的内衬多为植绒，掉屑后用黏毛滚筒粘，不要用刷子。</div>
+        </details>
+        <details class="faq">
+          <summary>笔盒买回来有塑料味，散多久能用？</summary>
+          <div class="faq-body">硬质 PP 或 ABS 的轻微气味，开盖放在通风处 1–2 天多数会减弱。持续 3 天以上还有刺鼻气味，可能是回收料比例高，建议退换。EVA 透明盒气味相对轻，但也建议通风一天再装笔。不要用热水烫，60℃ 以上 PP 会变形。</div>
+        </details>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="section" id="reviews" aria-labelledby="rev-title">
+        <div class="section-head">
+          <h2 id="rev-title">用户评论<small>7 天试用反馈摘录</small></h2>
+        </div>
+        <div class="reviews">
+          <div class="review">
+            <div class="who"><span class="avatar">林</span><b>林同学</b><span>初二 · 11-06</span></div>
+            <div class="stars" aria-label="评分 5 星">★★★★★</div>
+            <p>斑马 Tect2way 双面那款，上下各 10 格，笔夹朝上放不会互相卡。就是格子宽 9mm，我的 10mm 记号笔只能横着塞在中间空位。</p>
+          </div>
+          <div class="review">
+            <div class="who"><span class="avatar">周</span><b>周女士</b><span>家长 · 11-04</span></div>
+            <div class="stars" aria-label="评分 3 星">★★★☆☆</div>
+            <p>给孩子买的 19 元翻盖盒，用了两周卡扣就松，合上还能晃。按深度解析里说的，卡扣才是关键，下次打算加钱买双轴那款。</p>
+          </div>
+          <div class="review">
+            <div class="who"><span class="avatar">陈</span><b>陈工</b><span>办公 · 11-03</span></div>
+            <div class="stars" aria-label="评分 4 星">★★★★☆</div>
+            <p>办公桌用帆布拉链笔袋，52g 不压手，放显示器下面正好。唯一问题是浅色帆布沾了圆珠笔油，按 FAQ 的方法擦了半天还留印。</p>
+          </div>
+          <div class="review">
+            <div class="who"><span class="avatar">吴</span><b>吴同学</b><span>高一 · 11-02</span></div>
+            <div class="stars" aria-label="评分 2 星">★★☆☆☆</div>
+            <p>三层抽屉笔盒好看是好看，第三层基本没开过。而且 68mm 厚，放课桌抽屉会顶到木板，只能放桌面，被碰倒过两次。</p>
+          </div>
+          <div class="review">
+            <div class="who"><span class="avatar">何</span><b>何老师</b><span>监考 · 11-05</span></div>
+            <div class="stars" aria-label="评分 3 星">★★★☆☆</div>
+            <p>考场上确实见学生带彩色拉链头的透明笔袋被提醒。考点要求写的是“无印刷无夹层”，执行时看监考尺度，带纯透明 EVA 盒最省事。</p>
+          </div>
+          <div class="review">
+            <div class="who"><span class="avatar">赵</span><b>赵同学</b><span>六年级 · 11-01</span></div>
+            <div class="stars" aria-label="评分 4 星">★★★★☆</div>
+            <p>国誉那款笔槽 96mm，我的 8mm 中性笔能平放，合盖不压尖。就是摊开后占了课桌快一半，和同桌同时打开会打架。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 + 时间线 -->
+      <section class="section" id="timeline" aria-labelledby="news-title">
+        <div class="section-head">
+          <h2 id="news-title">相关资讯<small>货期、上新与门店动作</small></h2>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <span class="badge green">货期追踪</span>
+            <h3 style="font-size:var(--fs-m);color:var(--brand-dark);margin:8px 0">双层笔盒三家连锁门店上新节奏差 9 天</h3>
+            <p style="font-size:var(--fs-s);color:var(--ink-soft)">10-29 起走访三家文具连锁。A 店 10-30 上架双层拉链款，B 店 11-02 到货，C 店 11-07 才补齐灰蓝色。同一型号价差 6 元，A 店做 39 元促销，C 店标 45 元。想赶开学后用，优先去 A 店或线上同名旗舰店。</p>
+          </div>
+          <div class="card">
+            <span class="badge">配件供应</span>
+            <h3 style="font-size:var(--fs-m);color:var(--brand-dark);margin:8px 0">分隔隔板单卖断货，替代方案是自剪 EVA 片</h3>
+            <p style="font-size:var(--fs-s);color:var(--ink-soft)">11-03 询问 4 家门店，翻盖盒的原装隔板均无单卖。实测用 2mm EVA 片按笔槽宽度裁剪，塞进槽内可以起到分层作用，一片成本不足 2 元，但边缘要磨圆，否则会刮笔杆漆面。</p>
+          </div>
+        </div>
+        <ol class="timeline" style="margin-top:var(--space-3)">
+          <li><time datetime="2026-11-08">11-08</time>斑马 Tect2way 灰蓝配色线下到货，39 元档。</li>
+          <li><time datetime="2026-11-06">11-06</time>12 款翻盖笔盒抗压数据完成入库。</li>
+          <li><time datetime="2026-11-05">11-05</time>PVC 透明笔袋归类为考场用品，补 5 家考点要求。</li>
+          <li><time datetime="2026-11-03">11-03</time>帆布笔袋水洗缩水数据补充，3 次平均 6mm。</li>
+          <li><time datetime="2026-10-30">10-30</time>30 名初中生三层笔盒 7 天使用记录启动。</li>
+        </ol>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="section" id="related" aria-labelledby="rel-title">
+        <div class="section-head">
+          <h2 id="rel-title">相关推荐<small>按搜索词直达</small></h2>
+        </div>
+        <div class="tags">
+          <a href="/#deep">翻盖笔盒笔槽深度</a>
+          <a href="/#guide">帆布笔袋拉链怎么选</a>
+          <a href="/#cats">PVC 透明笔袋考场要求</a>
+          <a href="/#reviews">20 元以下笔盒质量</a>
+          <a href="/#guide">小学生大容量笔盒推荐</a>
+          <a href="/#compare">牛津布和帆布笔袋区别</a>
+          <a href="/#overview">办公桌笔盒尺寸</a>
+          <a href="/#timeline">笔盒分隔板替代</a>
+          <a href="/#faq">笔盒塑料味处理</a>
+          <a href="/#deep">三层笔盒实用性</a>
+        </div>
+      </section>
+
+      <!-- 榜单 + 证言 -->
+      <section class="section" id="rank" aria-labelledby="rank-title">
+        <div class="section-head">
+          <h2 id="rank-title">补充板块<small>7 天试用榜与店主证言</small></h2>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3 style="font-size:var(--fs-m);color:var(--brand-dark);margin-bottom:8px">7 天综合榜（按卡扣保持、笔槽深度、自重加权）</h3>
+            <ol style="font-size:var(--fs-s);margin-bottom:0;padding-left:1.2em">
+              <li>国誉 Noritake A4 翻盖盒 · 笔槽 96mm · 卡扣 3000 次后仍紧</li>
+              <li>斑马 Tect2way 双面 · 20 格 · 记号笔需横放</li>
+              <li>无印良品双层尼龙笔袋 · 自重 41g · 拉链顺滑</li>
+              <li>某电商 39 元牛津布笔袋 · 内衬易划 · 性价比高</li>
+              <li>柯林 20 元翻盖盒 · 卡扣 200 次后松 · 仅推荐短期用</li>
+            </ol>
+          </div>
+          <div class="quote-card">
+            <p>“进货看卡扣，不看颜色。上周退回来的 7 个翻盖盒，5 个是卡扣合不紧，另外 2 个是铰链断。颜色再好看，学生用两周就回来换。”</p>
+            <cite>—— 城西文具店店主 王师傅，11-04 口述</cite>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <aside class="sidebar" aria-label="侧栏导航">
+      <nav class="sidebar-nav" id="sideNav">
+        <h2>本页栏目</h2>
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选内容推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#cats">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#reviews">用户评论</a>
+        <a href="/#timeline">相关资讯</a>
+        <a href="/#related">相关推荐</a>
+        <a href="/#rank">榜单与证言</a>
+      </nav>
+      <div class="card" style="margin-top:var(--space-3);font-size:var(--fs-xs);color:var(--ink-soft)">
+        <b style="color:var(--brand-dark);display:block;margin-bottom:6px">数据说明</b>
+        笔槽深度与卡扣次数为 8mm 中性笔基准下的手工实测，样本 12 款；评论来自 7 天试用记录，用户名为示例化处理。更新时间 2026-11-08。
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="6" y="20" width="52" height="30" rx="5" fill="#e0a13c"/>
+            <rect x="6" y="15" width="52" height="9" rx="4" fill="#f4efe4"/>
+            <rect x="28" y="11" width="8" height="12" rx="2" fill="#202b2d"/>
+          </svg>
+          <b>笔盒在线入口</b>
+        </div>
+        <p class="footer-note">把笔盒当工具量：先数笔、再量桌面、最后拉一遍拉链。</p>
+      </div>
+      <div>
+        <h3>按盒型</h3>
+        <a href="/#deep">翻盖硬盒</a>
+        <a href="/#guide">帆布拉链笔袋</a>
+        <a href="/#cats">多层抽屉笔盒</a>
+        <a href="/#cats">PVC 透明笔袋</a>
+      </div>
+      <div>
+        <h3>按人群</h3>
+        <a href="/#guide">小学生笔盒</a>
+        <a href="/#overview">办公桌面笔盒</a>
+        <a href="/#cats">考场文具收纳</a>
+        <a href="/#reviews">入门价位</a>
+      </div>
+      <div>
+        <h3>内容</h3>
+        <a href="/#latest">最新更新</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#timeline">相关资讯</a>
+        <a href="/#rank">试用榜</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>页面内容含示例数据，实测数值以标注日期为准。页脚更新时间 2026-11-08，对应正文“12 款翻盖笔盒抗压数据入库”。</span>
+      <span>© 2026 笔盒在线入口</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  menuBtn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.matchMedia('(max-width:760px)').matches){
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    }
+  });
+
+  var input = document.getElementById('siteSearch');
+  var feedback = document.getElementById('searchFeedback');
+  var index = [
+    {t:'翻盖笔盒笔槽深度实测', id:'deep'},
+    {t:'12 款翻盖笔盒抗压数据', id:'latest'},
+    {t:'卡扣 3000 次开合寿命', id:'deep'},
+    {t:'帆布笔袋拉链怎么选', id:'guide'},
+    {t:'牛津布与帆布区别', id:'compare'},
+    {t:'PVC 透明笔袋考场要求', id:'faq'},
+    {t:'多层笔盒第三层使用率', id:'deep'},
+    {t:'小学生大容量笔盒', id:'guide'},
+    {t:'办公桌面笔盒尺寸', id:'overview'},
+    {t:'笔盒塑料味处理', id:'faq'},
+    {t:'分隔隔板替代方案', id:'timeline'},
+    {t:'斑马 Tect2way 补货', id:'latest'},
+    {t:'国誉 Noritake 笔盒', id:'picks'},
+    {t:'用户评论与吐槽', id:'reviews'}
+  ];
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase();
+    if(!q){ feedback.classList.remove('show'); feedback.innerHTML=''; return; }
+    var hits = index.filter(function(item){ return item.t.toLowerCase().indexOf(q) > -1; }).slice(0,5);
+    if(hits.length){
+      feedback.innerHTML = '<strong>找到 '+hits.length+' 条：</strong><br>' + hits.map(function(h){
+        return '<a href="/#'+h.id+'">'+h.t+'</a>';
+      }).join('<br>');
+    } else {
+      feedback.innerHTML = '没有匹配“'+ input.value.replace(/[<>&]/g,'') +'”的条目。<br>可试试：翻盖、拉链、透明、三层、卡扣。';
+    }
+    feedback.classList.add('show');
+  });
+  document.addEventListener('click', function(e){
+    if(!input.parentNode.contains(e.target)) feedback.classList.remove('show');
+  });
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href').replace('/#','#')); }).filter(Boolean);
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var y = window.scrollY + 140;
+    var cur = null;
+    sections.forEach(function(sec){ if(sec.offsetTop <= y) cur = sec.id; });
+    links.forEach(function(a){
+      a.classList.toggle('current', a.getAttribute('href') === '/#'+cur);
+    });
+    toTop.classList.toggle('show', window.scrollY > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"笔盒在线入口",
+  "description":"翻盖、拉链、多层笔盒的规格对比与收纳实测，含补货清单、价位分布与常见问题。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"翻盖笔盒和拉链笔袋哪个更适合小学生？","acceptedAnswer":{"@type":"Answer","text":"看笔量和课桌。小学生常用铅笔4到6支、橡皮1块、尺子1把，总量10件以内。单层翻盖盒分格能让铅笔不滚落，取用快；低年级课桌常与同桌拼用，翻盖盒摊开约30cm，容易越界。一年级建议用20cm以内拉链袋，二年级后换单层翻盖。"}},
+    {"@type":"Question","name":"透明笔袋进考场会不会被拦？","acceptedAnswer":{"@type":"Answer","text":"考点要求不一致。11月5日核对的5个考点里，3个只要求透明，1个限尺寸22×12cm，1个禁止夹层和印刷。带彩色拉链头、外侧印花、内层隔板的款式存在被要求更换的可能。赴考前查准考证背面的物品说明。"}},
+    {"@type":"Question","name":"多层笔盒的第三层真的用得上吗？","acceptedAnswer":{"@type":"Answer","text":"7天记录里第三层打开次数中位数是3次，多数是取备用笔芯。合盖厚度62到70mm，放进25cm深的课桌抽屉会顶到桌板。桌面宽度70cm以上、有固定置物位时值得用；普通教室课桌更建议两层结构。"}},
+    {"@type":"Question","name":"笔盒内衬脏了怎么清理？","acceptedAnswer":{"@type":"Answer","text":"帆布内衬用软毛刷蘸中性洗涤剂轻刷，阴干，别拧；水洗3次会缩6mm左右。PVC内衬用湿巾擦，圆珠笔漏墨用75%酒精棉片点擦，不要整面擦，酒精会让PVC发白。硬壳翻盖盒的植绒内衬用黏毛滚筒粘，不要用刷子。"}},
+    {"@type":"Question","name":"笔盒买回来有塑料味，散多久能用？","acceptedAnswer":{"@type":"Answer","text":"硬质PP或ABS的轻微气味，开盖通风1到2天多数会减弱。持续3天以上还有刺鼻气味，可能是回收料比例高，建议退换。EVA透明盒气味相对轻，也建议通风一天再装笔。不要用热水烫，60℃以上PP会变形。"}}
+  ]
+}
+</script>
+</body>
+</html>

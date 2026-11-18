@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>女王社区vk-女性向兴趣社群与话题集中地</title>
+<meta name="description" content="女王社区vk是一个聚焦女性向兴趣与话题的社区型站点，提供女王社区vk的频道导航、深度解析、体验指南与用户评论，帮助新成员快速了解板块结构、内容规则与参与方式。">
+<meta name="keywords" content="女王社区vk">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235b2a6b'/%3E%3Cpath d='M18 46V22l10 12 4-6 4 6 10-12v24' fill='none' stroke='%23f3d9a4' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --purple:#5b2a6b;
+  --purple-deep:#3d1b49;
+  --gold:#c99a3f;
+  --gold-light:#f3d9a4;
+  --ink:#241a2b;
+  --ink-soft:#54606b;
+  --paper:#fbf8f4;
+  --card:#ffffff;
+  --line:#e4dbe8;
+  --tint:#f2ecf5;
+  --radius:12px;
+  --radius-lg:18px;
+  --shadow:0 6px 20px rgba(59,27,73,.08);
+  --shadow-sm:0 2px 8px rgba(59,27,73,.06);
+  --fs-h1:2.1rem;
+  --fs-h2:1.42rem;
+  --fs-h3:1.08rem;
+  --space:clamp(16px,2.4vw,28px);
+  --maxw:1180px;
+  --sticky-offset:112px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-offset)}
+body{
+  margin:0;
+  font-family:"Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.85;
+  font-size:16px;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--purple);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .6em;font-weight:700}
+h1{font-size:var(--fs-h1)}
+h2{font-size:var(--fs-h2)}
+h3{font-size:var(--fs-h3)}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+li{margin-bottom:.4em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--purple);color:#fff;padding:10px 16px;z-index:200}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space)}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-family:system-ui,sans-serif;margin-bottom:.4em;display:block}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ===== 吸顶部分 ===== */
+.sticky-stack{position:sticky;top:0;z-index:100}
+.announce{
+  background:linear-gradient(90deg,var(--purple-deep),var(--purple));
+  color:#f7eef7;font-size:.84rem;font-family:system-ui,sans-serif;
+  padding:7px var(--space);text-align:center;
+}
+.announce strong{color:var(--gold-light);font-weight:700}
+.announce a{color:var(--gold-light);text-decoration:underline}
+.site-header{
+  background:rgba(251,248,244,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow-sm);
+}
+.header-inner{
+  display:flex;align-items:center;gap:18px;justify-content:space-between;
+  max-width:var(--maxw);margin:0 auto;padding:10px var(--space);
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand svg{flex-shrink:0}
+.brand-text{font-family:system-ui,sans-serif;font-weight:800;font-size:1.05rem;color:var(--purple-deep);letter-spacing:.02em}
+.brand-text small{display:block;font-size:.66rem;font-weight:400;letter-spacing:.16em;color:var(--ink-soft)}
+.nav-toggle{
+  display:none;background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:7px 12px;font-size:.85rem;font-family:system-ui,sans-serif;color:var(--purple-deep);
+  cursor:pointer;align-items:center;gap:6px;
+}
+.nav-toggle svg{width:16px;height:16px}
+.primary-nav{display:flex;gap:4px;flex-wrap:wrap;font-family:system-ui,sans-serif;font-size:.88rem}
+.primary-nav a{
+  padding:6px 10px;border-radius:8px;color:var(--ink-soft);white-space:nowrap;
+}
+.primary-nav a:hover{background:var(--tint);color:var(--purple-deep);text-decoration:none}
+.header-tools{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.search-box{position:relative}
+.search-box input{
+  font-family:system-ui,sans-serif;font-size:.85rem;
+  border:1px solid var(--line);background:#fff;border-radius:999px;
+  padding:8px 14px;width:170px;color:var(--ink);
+  transition:width .2s ease,border-color .2s ease;
+}
+.search-box input:focus{width:210px;border-color:var(--gold);outline:none}
+.search-feedback{
+  position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--line);
+  border-radius:10px;box-shadow:var(--shadow);padding:10px 14px;min-width:230px;
+  font-size:.82rem;font-family:system-ui,sans-serif;color:var(--ink-soft);display:none;
+}
+.search-feedback.show{display:block}
+.search-feedback b{color:var(--purple-deep)}
+.header-cta{
+  font-family:system-ui,sans-serif;font-size:.82rem;background:var(--purple);color:#fff;
+  padding:8px 15px;border-radius:999px;white-space:nowrap;font-weight:600;
+}
+.header-cta:hover{background:var(--purple-deep);text-decoration:none}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(201,154,63,.16),transparent 46%),
+    radial-gradient(circle at 12% 88%,rgba(91,42,107,.12),transparent 52%),
+    linear-gradient(160deg,#fbf6ee 0%,#f3e9f4 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(30px,5vw,64px) var(--space);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,52px);align-items:center;
+}
+.hero-copy{position:relative;z-index:2}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-family:system-ui,sans-serif;
+  font-size:.76rem;letter-spacing:.12em;background:#fff;border:1px solid var(--line);
+  color:var(--purple-deep);padding:5px 12px;border-radius:999px;margin-bottom:16px;box-shadow:var(--shadow-sm);
+}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+.hero h1{color:var(--purple-deep);margin-bottom:.45em;letter-spacing:.01em}
+.hero-lead{font-size:1.02rem;color:var(--ink-soft);max-width:36em;margin-bottom:1.2em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;font-family:system-ui,sans-serif}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:999px;font-size:.9rem;font-weight:600;
+  transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 6px 16px rgba(91,42,107,.25)}
+.btn-primary:hover{background:var(--purple-deep)}
+.btn-ghost{background:#fff;color:var(--purple-deep);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--gold);background:#fffdf8}
+.hero-stats{display:flex;flex-wrap:wrap;gap:26px;font-family:system-ui,sans-serif}
+.hero-stats div{display:flex;flex-direction:column}
+.hero-stats b{font-size:1.35rem;color:var(--purple-deep);line-height:1.2}
+.hero-stats span{font-size:.76rem;color:var(--ink-soft);letter-spacing:.04em}
+.hero-art{position:relative;z-index:1}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 14px 28px rgba(61,27,73,.16))}
+.hero-caption{
+  font-family:system-ui,sans-serif;font-size:.72rem;color:var(--ink-soft);
+  text-align:center;margin-top:10px;letter-spacing:.06em;
+}
+
+/* ===== 通用板块 ===== */
+main{display:block}
+.section{padding:clamp(34px,5vw,60px) 0;border-bottom:1px solid var(--line)}
+.section:last-of-type{border-bottom:none}
+.section-head{margin-bottom:clamp(18px,2.6vw,30px);max-width:62ch}
+.section-head h2{color:var(--purple-deep)}
+.section-head p{color:var(--ink-soft);margin-bottom:0}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:clamp(16px,2vw,22px);box-shadow:var(--shadow-sm);
+}
+.card h3{margin-bottom:.4em;color:var(--purple-deep)}
+.card p:last-child{margin-bottom:0}
+.meta{font-family:system-ui,sans-serif;font-size:.76rem;color:var(--ink-soft);letter-spacing:.03em;margin-bottom:.5em;display:block}
+.tag{
+  display:inline-block;font-family:system-ui,sans-serif;font-size:.76rem;
+  background:var(--tint);color:var(--purple-deep);border-radius:999px;
+  padding:3px 11px;margin:0 6px 6px 0;border:1px solid transparent;
+}
+a.tag:hover{background:#e8dcef;border-color:var(--gold);text-decoration:none}
+.kicker{
+  font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.16em;
+  color:var(--gold);display:block;margin-bottom:.35em;
+}
+
+/* 频道索引 */
+.channels{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;font-family:system-ui,sans-serif}
+.channel{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+  display:flex;flex-direction:column;gap:2px;transition:transform .15s ease,border-color .15s ease;
+}
+.channel:hover{transform:translateY(-3px);border-color:var(--gold);text-decoration:none}
+.channel b{color:var(--purple-deep);font-size:.95rem}
+.channel span{font-size:.74rem;color:var(--ink-soft);line-height:1.5}
+
+/* 精选推荐 */
+.feature-card{position:relative;overflow:hidden;padding-top:0}
+.feature-card .thumb{margin:0 calc(-1 * clamp(16px,2vw,22px)) 16px}
+.feature-card .thumb img{width:100%;height:170px;object-fit:cover}
+.feature-card .badge{
+  position:absolute;top:12px;left:12px;background:var(--gold);color:#fff;
+  font-family:system-ui,sans-serif;font-size:.72rem;padding:3px 10px;border-radius:999px;font-weight:600;
+}
+
+/* 紧凑列表 */
+.list-news{list-style:none;padding:0;margin:0}
+.list-news li{
+  display:flex;gap:14px;padding:13px 0;border-bottom:1px dashed var(--line);align-items:baseline;
+}
+.list-news li:last-child{border-bottom:none}
+.list-news time{
+  font-family:system-ui,sans-serif;font-size:.76rem;color:var(--gold);
+  flex-shrink:0;width:72px;letter-spacing:.02em;
+}
+.list-news a{color:var(--ink);font-size:.95rem}
+.list-news a:hover{color:var(--purple);text-decoration:underline}
+.list-news .note{display:block;font-size:.8rem;color:var(--ink-soft);margin-top:1px}
+
+/* 深度解析 */
+.deep{background:linear-gradient(180deg,#fff,#fdf9f2);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(20px,3vw,36px);box-shadow:var(--shadow-sm)}
+.deep h3{color:var(--purple-deep);margin-top:1.5em;padding-top:.2em}
+.deep h3:first-of-type{margin-top:.6em}
+.deep blockquote{
+  margin:1.2em 0;padding:14px 20px;border-left:4px solid var(--gold);
+  background:#fdf7ec;border-radius:0 10px 10px 0;font-size:.96rem;color:#4a3a2a;
+}
+.deep blockquote p{margin:0}
+.deep .checks{background:#f3eef7;border-radius:12px;padding:16px 20px;margin:1.2em 0;border:1px solid #e3d5ea}
+.deep .checks h4{margin:0 0 .5em;color:var(--purple-deep);font-size:.98rem}
+.deep .checks ul{margin:0;padding-left:1.2em;font-size:.92rem}
+.deep .checks li{margin-bottom:.35em}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.9rem}
+.compare>div{padding:16px 18px}
+.compare .colA{background:#fff}
+.compare .colB{background:#f7f1fa}
+.compare .colhead{
+  font-family:system-ui,sans-serif;font-weight:700;font-size:.86rem;
+  color:var(--purple-deep);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px;
+}
+.compare ul{margin:0;padding-left:1.1em}
+.compare li{margin-bottom:.4em}
+
+/* 步骤 */
+.steps{counter-reset:step;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.steps li{
+  counter-increment:step;position:relative;padding:16px 18px 16px 64px;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);
+}
+.steps li::before{
+  content:counter(step);position:absolute;left:16px;top:16px;width:32px;height:32px;
+  border-radius:50%;background:var(--purple);color:#fff;font-family:system-ui,sans-serif;
+  font-size:.92rem;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.steps b{display:block;color:var(--purple-deep);margin-bottom:2px}
+.steps span{font-size:.88rem;color:var(--ink-soft)}
+
+/* FAQ */
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;
+  padding:0;box-shadow:var(--shadow-sm);
+}
+.faq summary{
+  cursor:pointer;padding:14px 18px;font-weight:700;color:var(--purple-deep);
+  list-style:none;position:relative;padding-right:44px;font-size:.96rem;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:18px;top:12px;font-size:1.2rem;color:var(--gold);font-weight:400;
+  transition:transform .2s ease;
+}
+.faq details[open] summary::after{content:"−"}
+.faq details[open] summary{border-bottom:1px solid var(--line)}
+.faq .answer{padding:14px 18px;font-size:.92rem;color:var(--ink-soft)}
+.faq .answer p:last-child{margin-bottom:0}
+
+/* 评论 */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.review{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px;
+  display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow-sm);
+}
+.review p{margin:0;font-size:.9rem;color:#3d3448}
+.review .who{font-family:system-ui,sans-serif;font-size:.78rem;color:var(--ink-soft);display:flex;justify-content:space-between;gap:8px}
+.stars{color:var(--gold);letter-spacing:.1em;font-size:.85rem}
+.review.tip{border-left:4px solid var(--gold)}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 18px 30px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:0;top:8px;width:14px;height:14px;border-radius:50%;
+  background:#fff;border:3px solid var(--gold);
+}
+.timeline time{font-family:system-ui,sans-serif;font-size:.76rem;color:var(--gold);display:block;margin-bottom:2px}
+.timeline b{display:block;color:var(--purple-deep);font-size:.95rem}
+
+/* 相关推荐标签 */
+.tagcloud{display:flex;flex-wrap:wrap;gap:8px}
+.tagcloud a{
+  font-family:system-ui,sans-serif;font-size:.82rem;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:7px 15px;color:var(--purple-deep);transition:all .15s ease;
+}
+.tagcloud a:hover{background:var(--purple);color:#fff;border-color:var(--purple);text-decoration:none;transform:translateY(-2px)}
+
+/* 榜单 */
+.rank{list-style:none;padding:0;margin:0;counter-reset:rank}
+.rank li{
+  counter-increment:rank;display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:flex-start;
+}
+.rank li:last-child{border-bottom:none}
+.rank li::before{
+  content:counter(rank);font-family:system-ui,sans-serif;font-weight:800;font-size:1rem;
+  color:var(--gold);width:26px;flex-shrink:0;text-align:center;
+}
+.rank b{display:block;color:var(--purple-deep);font-size:.95rem}
+.rank span{font-size:.84rem;color:var(--ink-soft)}
+
+/* 页尾 */
+.site-footer{background:var(--purple-deep);color:#e6d9ea;padding:clamp(32px,4vw,52px) 0 24px;font-size:.88rem}
+.footer-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--space);display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:28px}
+.site-footer h3{color:#fff;font-size:.95rem;margin-bottom:.7em;font-family:system-ui,sans-serif;letter-spacing:.04em}
+.site-footer a{color:#d7c4e0}
+.site-footer a:hover{color:var(--gold-light)}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin-bottom:.45em}
+.footer-brand .logo-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.footer-brand .ftxt{font-family:system-ui,sans-serif;font-weight:800;color:#fff;font-size:1.02rem}
+.footer-brand p{color:#bdaac9;margin-bottom:.6em}
+.footer-note{border-top:1px solid rgba(255,255,255,.14);margin-top:30px;padding-top:18px}
+.footer-note-inner{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--space);
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+  font-family:system-ui,sans-serif;font-size:.76rem;color:#b3a0bf;
+}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:90;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:#fff;color:var(--purple-deep);box-shadow:var(--shadow);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:all .25s ease;
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--purple);color:#fff}
+
+/* 响应式 */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-art{order:-1;max-width:420px;margin:0 auto}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .reviews{grid-template-columns:repeat(2,1fr)}
+  .channels{grid-template-columns:repeat(3,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .primary-nav{display:none;width:100%;order:4;padding-top:8px;border-top:1px solid var(--line);margin-top:6px}
+  .primary-nav.open{display:flex}
+  .nav-toggle{display:inline-flex}
+  .header-inner{flex-wrap:wrap}
+}
+@media (max-width:620px){
+  :root{--fs-h1:1.6rem;--fs-h2:1.2rem}
+  .hero-stats{gap:18px}
+  .hero-stats b{font-size:1.15rem}
+  .g3,.g2,.reviews{grid-template-columns:1fr}
+  .channels{grid-template-columns:repeat(2,1fr)}
+  .compare{grid-template-columns:1fr}
+  .search-box input{width:130px}
+  .search-box input:focus{width:150px}
+  .header-cta{display:none}
+  .footer-inner{grid-template-columns:1fr}
+  .list-news li{flex-direction:column;gap:2px}
+  .list-news time{width:auto}
+  .to-top{right:12px;bottom:12px;width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .btn:hover,.channel:hover,.tagcloud a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="sticky-stack">
+  <div class="announce" role="region" aria-label="站内更新公告">
+    <strong>女王社区vk</strong> 11月8日更新：<span>「审美穿搭」频道新增 12 条秋冬通勤配色案例</span> · <a href="/#latest">查看更新记录</a>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="女王社区vk 首页">
+        <svg width="38" height="38" viewBox="0 0 64 64" role="img" aria-label="王冠形社区标志">
+          <rect width="64" height="64" rx="16" fill="#5b2a6b"/>
+          <path d="M15 44V23l9 11 4.5-7 4.5 7 9-11v21" fill="none" stroke="#f3d9a4" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="15" cy="21" r="3" fill="#f3d9a4"/>
+          <circle cx="32" cy="23" r="3" fill="#f3d9a4"/>
+          <circle cx="49" cy="21" r="3" fill="#f3d9a4"/>
+        </svg>
+        <span class="brand-text">女王社区vk<small>QUEEN&nbsp;COMMUNITY</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+        菜单
+      </button>
+      <nav class="primary-nav" id="primaryNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#channels">频道索引</a>
+        <a href="/#picks">精选推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="header-tools">
+        <div class="search-box">
+          <label class="sr-only" for="siteSearch">站内搜索</label>
+          <input id="siteSearch" type="search" placeholder="搜索频道 / 话题" autocomplete="off">
+          <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+        </div>
+        <a class="header-cta" href="/#join">加入方式</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+  <!-- 首屏 -->
+  <section class="hero" id="top" aria-labelledby="heroTitle">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-badge"><span class="dot"></span>女性向兴趣社群 · 内容与话题集中地</span>
+        <h1 id="heroTitle">女王社区vk</h1>
+        <p class="hero-lead">一个把穿搭、妆容、阅读、宠物、城市散步与职场沟通放在同一屋檐下的女性兴趣社区。频道按具体话题分栏，讨论以可核对的经验与案例为主，新成员可从频道索引或体验指南进入。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#channels">浏览频道索引</a>
+          <a class="btn btn-ghost" href="/#guide">新成员体验指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>11</b><span>主题频道</span></div>
+          <div><b>184</b><span>本周新帖</span></div>
+          <div><b>2,730</b><span>话题条目</span></div>
+          <div><b>2026-11-08</b><span>内容更新日</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 360 300" role="img" aria-label="王冠、书架与对话气泡组成的原创插画">
+          <defs>
+            <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5b2a6b"/>
+              <stop offset="1" stop-color="#8c4d9c"/>
+            </linearGradient>
+            <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f3d9a4"/>
+              <stop offset="1" stop-color="#d8a94c"/>
+            </linearGradient>
+          </defs>
+          <rect x="14" y="14" width="332" height="272" rx="24" fill="#fff" opacity=".7"/>
+          <rect x="38" y="60" width="150" height="188" rx="12" fill="url(#gA)"/>
+          <rect x="56" y="82" width="114" height="10" rx="5" fill="#f3d9a4" opacity=".9"/>
+          <rect x="56" y="106" width="86" height="8" rx="4" fill="#f3d9a4" opacity=".55"/>
+          <rect x="56" y="126" width="100" height="8" rx="4" fill="#f3d9a4" opacity=".55"/>
+          <rect x="56" y="146" width="70" height="8" rx="4" fill="#f3d9a4" opacity=".55"/>
+          <circle cx="74" cy="196" r="20" fill="#f3d9a4" opacity=".85"/>
+          <rect x="106" y="184" width="60" height="8" rx="4" fill="#fff" opacity=".6"/>
+          <rect x="106" y="202" width="44" height="8" rx="4" fill="#fff" opacity=".4"/>
+          <path d="M214 74h108a14 14 0 0 1 14 14v82a14 14 0 0 1-14 14h-56l-20 22v-22h-32a14 14 0 0 1-14-14V88a14 14 0 0 1 14-14z" fill="#fff" stroke="#e4dbe8"/>
+          <rect x="228" y="96" width="80" height="9" rx="4" fill="#8c4d9c" opacity=".8"/>
+          <rect x="228" y="116" width="60" height="8" rx="4" fill="#b9a6c4"/>
+          <rect x="228" y="134" width="70" height="8" rx="4" fill="#b9a6c4"/>
+          <circle cx="246" cy="162" r="7" fill="#c99a3f"/>
+          <circle cx="272" cy="162" r="7" fill="#5b2a6b" opacity=".6"/>
+          <path d="M62 258l10-16 10 16z" fill="url(#gB)" opacity=".9"/>
+          <path d="M236 246l14-24 14 24z" fill="url(#gB)"/>
+          <circle cx="300" cy="252" r="10" fill="url(#gA)" opacity=".7"/>
+        </svg>
+        <p class="hero-caption">原创构图：频道卡片、对话气泡与王冠标识</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 领域概览 -->
+  <section class="section" id="overview" aria-labelledby="ovTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Overview</span>
+        <h2 id="ovTitle">领域概览：一个女性兴趣社区在讨论什么</h2>
+        <p>社区把日常经验拆成可检索的条目。频道不以“生活”“美学”这类大词命名，而用「秋冬通勤配色」「底妆持妆时长」「单人养猫开销」等具体词，方便搜索与复用。</p>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <span class="meta">内容结构 · 2026-11-05</span>
+          <h3>穿搭与美妆的实操条目</h3>
+          <p>「审美穿搭」与「底妆实验室」两个频道共沉淀 870 条带图案例，多数帖子标注身高、肤色、预算与使用时长四项信息，便于读者比对自身条件。</p>
+        </article>
+        <article class="card">
+          <span class="meta">内容结构 · 2026-11-03</span>
+          <h3>阅读与城市散步的长文区</h3>
+          <p>「书影笔记」每周三固定更新共读提纲；「城市散步」按街区收录路线，每条路线附步行时长、洗手间位置与雨天替代方案。</p>
+        </article>
+        <article class="card">
+          <span class="meta">内容结构 · 2026-10-29</span>
+          <h3>宠物与职场沟通的经验区</h3>
+          <p>「单人养猫」侧重开销表与就医记录；「职场沟通」以邮件原文、会议纪要片段为素材，讨论措辞改写的具体效果。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 频道索引 -->
+  <section class="section" id="channels" aria-labelledby="chTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Channels</span>
+        <h2 id="chTitle">频道索引：11 个可直接搜索的话题类别</h2>
+        <p>频道按搜索词命名，点进去即为该话题的条目流。每个频道首页标注更新频率与主持编辑，避免内容长期无人维护。</p>
+      </div>
+      <div class="channels">
+        <a class="channel" href="/#picks"><b>秋冬通勤配色</b><span>每周二更新 · 主持：林棠</span></a>
+        <a class="channel" href="/#picks"><b>底妆持妆时长</b><span>每周四更新 · 主持：周见微</span></a>
+        <a class="channel" href="/#latest"><b>单人养猫开销</b><span>每周一更新 · 主持：陈叙</span></a>
+        <a class="channel" href="/#latest"><b>城市散步路线</b><span>每周五更新 · 主持：许照</span></a>
+        <a class="channel" href="/#deepdive"><b>职场邮件措辞</b><span>双周更新 · 主持：何嘉</span></a>
+        <a class="channel" href="/#deepdive"><b>书影共读提纲</b><span>每周三更新 · 主持：苏晚</span></a>
+        <a class="channel" href="/#guide"><b>小户型收纳尺寸</b><span>每周六更新 · 主持：叶青</span></a>
+        <a class="channel" href="/#guide"><b>独居晚餐备菜</b><span>每周日更新 · 主持：罗蔓</span></a>
+        <a class="channel" href="/#reviews"><b>护肤品成分对照</b><span>每月 1 日更新 · 主持：宋迟</span></a>
+        <a class="channel" href="/#reviews"><b>通勤鞋磨脚处理</b><span>每月 5 日更新 · 主持：沈知</span></a>
+        <a class="channel" href="/#join"><b>社群参与规则</b><span>随版本更新 · 主持：编辑组</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选推荐 -->
+  <section class="section" id="picks" aria-labelledby="pkTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Editor's Picks</span>
+        <h2 id="pkTitle">精选推荐：本周值得读完的三篇长帖</h2>
+        <p>编辑组按“信息密度 + 可复核程度”挑出三篇，作者均附原始记录或截图出处。</p>
+      </div>
+      <div class="grid g3">
+        <article class="card feature-card">
+          <div class="thumb"><img src="https://picsum.photos/seed/queenvk-outfit01/640/400" width="640" height="400" loading="lazy" alt="秋冬通勤配色案例：燕麦色大衣搭配深棕围巾与黑色短靴" style="object-fit:cover"></div>
+          <span class="badge">本周首选</span>
+          <span class="meta">审美穿搭 · 2026-11-06 · 作者 林棠</span>
+          <h3>燕麦色大衣的三套通勤配色，含 158cm 上身数据</h3>
+          <p>作者记录了三套搭配在 11 月 3 日至 11 月 6 日的通勤实穿情况，标注室内外温差与地铁拥挤程度，并给出配色失败的一次复盘。</p>
+        </article>
+        <article class="card feature-card">
+          <div class="thumb"><img src="https://picsum.photos/seed/queenvk-makeup02/640/400" width="640" height="400" loading="lazy" alt="底妆持妆测试台面：粉底液、定妆喷雾与记录表格" style="object-fit:cover"></div>
+          <span class="badge">实测</span>
+          <span class="meta">底妆实验室 · 2026-11-04 · 作者 周见微</span>
+          <h3>混油皮 8 小时持妆测试：三款粉底的暗沉顺序</h3>
+          <p>测试在 11 月 1 日进行，室温 22℃、湿度 55%。三款粉底按同一手法上妆，每小时记录一次鼻翼与额头状态，文中附对比表。</p>
+        </article>
+        <article class="card feature-card">
+          <div class="thumb"><img src="https://picsum.photos/seed/queenvk-cat03/640/400" width="640" height="400" loading="lazy" alt="单人养猫开销记录：猫粮袋、就医单据与记账本" style="object-fit:cover"></div>
+          <span class="badge">数据帖</span>
+          <span class="meta">单人养猫 · 2026-10-30 · 作者 陈叙</span>
+          <h3>独居养一只猫的月均开销表，含两次就医记录</h3>
+          <p>作者连续记录 6 个月支出，猫粮、猫砂、驱虫与一次肠胃炎就诊费用分项列出，并说明哪些支出可以压缩、哪些不建议省。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="section" id="latest" aria-labelledby="ltTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Updates</span>
+        <h2 id="ltTitle">最新更新：10 月 30 日至 11 月 8 日的条目变动</h2>
+        <p>以下为具体条目与修订说明，不含概括性描述。</p>
+      </div>
+      <ul class="list-news">
+        <li><time>11-08</time><div><a href="/#picks">「秋冬通勤配色」补充 12 条配色案例</a><span class="note">新增 158cm 与 168cm 两组身高数据，作者林棠</span></div></li>
+        <li><time>11-07</time><div><a href="/#deepdive">「职场邮件措辞」修订第 4 版措辞对照表</a><span class="note">删除 2 条过时示例，补入一份 11 月 2 日的会议纪要片段</span></div></li>
+        <li><time>11-06</time><div><a href="/#reviews">「护肤品成分对照」新增烟酰胺浓度区间说明</a><span class="note">依据 3 份产品成分表整理，标注来源批次</span></div></li>
+        <li><time>11-05</time><div><a href="/#latest">「城市散步路线」上线徐汇西岸雨天替代线</a><span class="note">全程 3.2 公里，附 4 处可避雨的室内节点</span></div></li>
+        <li><time>11-04</time><div><a href="/#picks">「底妆实验室」发布混油皮 8 小时测试</a><span class="note">测试环境 22℃、湿度 55%，附每小时记录表</span></div></li>
+        <li><time>11-02</time><div><a href="/#guide">「小户型收纳尺寸」更新衣柜进深对照</a><span class="note">补入 55cm 与 60cm 两种进深的实际挂衣量</span></div></li>
+        <li><time>10-30</time><div><a href="/#latest">「单人养猫开销」发布 6 个月支出记录</a><span class="note">含两次就医单据金额与用药清单</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="section" id="deepdive" aria-labelledby="ddTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Deep Dive</span>
+        <h2 id="ddTitle">深度解析：社区里“可复用的经验”到底怎么判断</h2>
+        <p>一个判断：在女性兴趣社区里，带条件说明的帖子比带结论的帖子更有长期价值，因为读者能按条件筛选。下面用具体案例拆开看。</p>
+      </div>
+      <article class="deep">
+        <h3>判断一：标注条件的穿搭帖，半年后仍有检索价值</h3>
+        <p>「秋冬通勤配色」频道在 2026 年 5 月至 10 月共发布 63 条带图案例。编辑组按“是否标注身高、肤色、预算、使用场景”四项统计，其中 41 条四项齐全。这 41 条在 10 月的站内检索次数为 1,860 次；另外 22 条仅写结论的帖子，同期检索次数 402 次。差距并非来自图片质量——两组图片平均点赞数接近，分别为 47 与 43。</p>
+        <p>可被反驳的地方在于：检索次数也受发布时间影响。41 条齐全帖中，有 27 条发布于 8 月之后，天然更靠前。所以更稳妥的说法是：条件齐全提高了被搜索命中的概率，但它不是唯一变量。频道主持林棠在 11 月 6 日的修订说明里也承认，早期帖子靠“标题关键词”仍在被访问。</p>
+        <div class="checks">
+          <h4>可核对结构：这条判断的四个检查点</h4>
+          <ul>
+            <li>样本：2026-05-01 至 2026-10-31 的 63 条带图案例</li>
+            <li>分组：四项齐全 41 条，结论型 22 条</li>
+            <li>指标：10 月站内检索次数（1,860 / 402）与平均点赞（47 / 43）</li>
+            <li>干扰项：发布时间分布不均，8 月后发布占齐全组 66%</li>
+          </ul>
+        </div>
+
+        <h3>判断二：同一款粉底，不同帖子的“持妆”定义不同</h3>
+        <p>11 月 4 日「底妆实验室」的测试帖把“持妆”定义为：8 小时内鼻翼不出现明显斑驳，且额头反光面积不超过上妆时的 1.5 倍。而 10 月 21 日另一篇帖子把“持妆”定义为“下班时仍能看到粉底”。两个定义在同一款粉底上给出了相反结论：前者判定为“勉强合格”，后者判定为“完全不行”。</p>
+        <blockquote><p>周见微在 11 月 4 日的测试帖原文写道：“同一瓶粉底，我 9 月写它撑不住 6 小时，是因为那天我骑了 40 分钟共享单车。11 月这次全程地铁，结果完全不同。环境比产品更决定结论。”</p></blockquote>
+        <p>这条判断可以反驳：如果测试环境差异如此大，那么单篇测试帖的价值就只在于“同环境对照”，而不是“产品排名”。但目前频道内多数帖子仍以单品结论为主，缺少同一环境下的横向对比，这是可以改进的方向。</p>
+
+        <h3>判断三：单人养猫开销帖的“省钱建议”需要分项看待</h3>
+        <p>10 月 30 日那篇 6 个月支出记录里，作者陈叙把月均开销拆成猫粮 210 元、猫砂 65 元、驱虫 40 元、零食 30 元、医疗储备 150 元，合计 495 元。评论区有人质疑“医疗储备 150 元太高”，但作者在 11 月 1 日的回复中贴出了 9 月一次肠胃炎的就诊单据：挂号 50 元、检查 180 元、药物 96 元，合计 326 元。这一次就诊就超过了两个月的储备额。</p>
+        <p>反过来说，如果猫全年健康，这笔储备确实会闲置。判断的分歧点在于风险偏好，而不在数字本身。社区里能核对的只是“发生过什么”，不能替读者决定“该留多少”。</p>
+
+        <h3>判断四：职场邮件改写示例的有效性依赖具体岗位</h3>
+        <p>「职场邮件措辞」频道 11 月 7 日的第 4 版对照表，把“我觉得这个方案有问题”改成“这个方案在预算部分我有些疑问，能否补充一下测算口径”。改写在行政与市场岗位的反馈里被评价为“更稳妥”；但在两家互联网公司的项目组反馈中，有人表示“太长，直接说问题在哪更快”。同一套措辞，在不同岗位的有效性相反。</p>
+        <p>因此，社区把这类内容标为“场景示例”而非“模板”，并在每条例子里标注适用岗位与汇报关系。这不是语言技巧问题，而是组织沟通成本问题。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="section" id="guide" aria-labelledby="gdTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Guide</span>
+        <h2 id="gdTitle">体验指南：新成员从注册到发第一条帖</h2>
+        <p>流程按实际界面步骤整理，每一步都对应一个可操作动作。</p>
+      </div>
+      <ol class="steps">
+        <li><b>选择入口频道</b><span>从 11 个频道里挑一个与自己当前问题最接近的，例如「小户型收纳尺寸」，先读置顶的三条说明。</span></li>
+        <li><b>阅读频道规则</b><span>每个频道首页有主持编辑与更新频率，规则页写明可发内容类型、图片要求与禁止行为。</span></li>
+        <li><b>检索已有条目</b><span>发帖前用站内搜索查关键词，避免重复；搜索结果会显示条目更新时间与作者。</span></li>
+        <li><b>按模板发第一条帖</b><span>帖子模板要求写明场景、条件与结论三部分。缺少条件的帖子会被移到「待补充」区。</span></li>
+        <li><b>回应评论与修订</b><span>作者可在 7 天内修订正文，修订记录公开可见；超过 7 天的更正需在评论区说明。</span></li>
+      </ol>
+      <div style="margin-top:26px">
+        <div class="compare">
+          <div class="colA">
+            <div class="colhead">适合发在「审美穿搭」的帖子</div>
+            <ul>
+              <li>带身高、体重、肤色与预算的实穿记录</li>
+              <li>同一件单品的三套搭配与失败复盘</li>
+              <li>换季衣柜整理前后的对比图</li>
+            </ul>
+          </div>
+          <div class="colB">
+            <div class="colhead">更适合发在「底妆实验室」的帖子</div>
+            <ul>
+              <li>固定环境下的持妆时长记录</li>
+              <li>同肤质多产品横向对照表</li>
+              <li>成分表差异与使用感受分开写</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="section" id="rank" aria-labelledby="rkTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Ranking</span>
+        <h2 id="rkTitle">10 月收藏榜：被反复保存的五条经验帖</h2>
+        <p>按 10 月 1 日至 10 月 31 日的站内收藏次数排序，收藏动作比点赞更能反映“以后还要用”。</p>
+      </div>
+      <div class="grid g2">
+        <ol class="rank">
+          <li><div><b>小户型衣柜 55cm 进深实测</b><span>收藏 412 次 · 作者叶青 · 10-12 发布</span></div></li>
+          <li><div><b>混油皮夏季粉底暗沉对照表</b><span>收藏 356 次 · 作者周见微 · 10-18 发布</span></div></li>
+          <li><div><b>一人食晚餐备菜 7 天清单</b><span>收藏 318 次 · 作者罗蔓 · 10-09 发布</span></div></li>
+        </ol>
+        <ol class="rank" start="4" style="counter-reset:rank 3">
+          <li><div><b>通勤鞋磨脚的三处处理位置</b><span>收藏 287 次 · 作者沈知 · 10-22 发布</span></div></li>
+          <li><div><b>徐汇西岸 3.2 公里散步路线</b><span>收藏 264 次 · 作者许照 · 10-26 发布</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="section" id="reviews" aria-labelledby="rvTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Voices</span>
+        <h2 id="rvTitle">用户评论：关于具体条目的六种声音</h2>
+        <p>评论按主题分组，包含肯定、中性提问与直接批评三类语气。</p>
+      </div>
+      <div class="reviews">
+        <div class="review">
+          <div class="stars" aria-label="评分 5 星">★★★★★</div>
+          <p>「小户型衣柜 55cm 进深实测」里那张挂衣量对照图很实用，我按 55cm 重新排了衣柜，冬天的长大衣终于不用斜着放。</p>
+          <div class="who"><span>@南栖</span><span>11-06</span></div>
+        </div>
+        <div class="review tip">
+          <div class="stars" aria-label="评分 4 星">★★★★☆</div>
+          <p>底妆那篇的 8 小时测试思路清楚，但只测了三款，价格段集中在 200 元以上，平价线没有覆盖，可惜。</p>
+          <div class="who"><span>@阿梨</span><span>11-05</span></div>
+        </div>
+        <div class="review">
+          <div class="stars" aria-label="评分 4 星">★★★★☆</div>
+          <p>「单人养猫开销」的医疗储备 150 元我一开始觉得多，后来翻到自己去年猫咪尿闭的单子，一次就花了 800 多，收回质疑。</p>
+          <div class="who"><span>@三花她妈</span><span>11-03</span></div>
+        </div>
+        <div class="review tip">
+          <div class="stars" aria-label="评分 3 星">★★★☆☆</div>
+          <p>「职场邮件措辞」第 4 版的例子偏行政岗，我在研发组，照搬那句“能否补充测算口径”被同事说绕，还是得看汇报关系。</p>
+          <div class="who"><span>@林间</span><span>11-07</span></div>
+        </div>
+        <div class="review">
+          <div class="stars" aria-label="评分 5 星">★★★★★</div>
+          <p>徐汇西岸那条散步线我周末走了一遍，文中标注的 4 处避雨点确实都在，其中一处是书店二楼，位置写得很准。</p>
+          <div class="who"><span>@慢走十分钟</span><span>11-02</span></div>
+        </div>
+        <div class="review">
+          <div class="stars" aria-label="评分 3 星">★★★☆☆</div>
+          <p>「护肤品成分对照」的烟酰胺浓度区间说明偏保守，2% 到 5% 都写了“可能刺激”，但实际使用感受个体差异很大，建议补上肤质分布。</p>
+          <div class="who"><span>@宋小满</span><span>11-04</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 时间线 -->
+  <section class="section" id="timeline" aria-labelledby="tlTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Timeline</span>
+        <h2 id="tlTitle">社区最近 30 天：内容建设时间线</h2>
+        <p>只记录有明确日期与可查条目的事件。</p>
+      </div>
+      <ol class="timeline">
+        <li><time>2026-10-09</time><b>「独居晚餐备菜」频道上线 7 天清单</b><span>首周收录 18 条一人食备菜记录，含成本与保存时长。</span></li>
+        <li><time>2026-10-12</time><b>「小户型收纳尺寸」发布 55cm 进深实测</b><span>作者叶青测量 4 种衣柜挂衣量，附实际衣架数量。</span></li>
+        <li><time>2026-10-22</time><b>「通勤鞋磨脚处理」新增三处处理位置</b><span>针对后跟、脚背、小趾三个摩擦点给出不同处理方式。</span></li>
+        <li><time>2026-10-30</time><b>「单人养猫开销」6 个月记录发布</b><span>含 2 次就医单据，医疗储备设为每月 150 元。</span></li>
+        <li><time>2026-11-04</time><b>「底妆实验室」混油皮 8 小时测试</b><span>三款粉底同环境对照，每小时记录一次状态。</span></li>
+        <li><time>2026-11-07</time><b>「职场邮件措辞」第 4 版对照表</b><span>删除 2 条过时示例，补入 11 月 2 日会议纪要片段。</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="section" id="news" aria-labelledby="nwTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Related</span>
+        <h2 id="nwTitle">相关资讯：领域内的规则与版本变化</h2>
+        <p>以下为社区外部或内部规则层面的变动，与上面的内容条目不在同一信息层。</p>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <span class="meta">规则变更 · 2026-11-01</span>
+          <h3>帖子模板新增“环境条件”必填项</h3>
+          <p>「底妆实验室」与「审美穿搭」两个频道自 11 月 1 日起，发帖需填写温度、湿度或穿着场景，以便读者做条件筛选。</p>
+        </article>
+        <article class="card">
+          <span class="meta">版本更新 · 2026-10-28</span>
+          <h3>修订记录改为公开可见</h3>
+          <p>作者在 7 天内修改正文会保留旧版本对照，读者可点击“查看修订”比对措辞变化，此功能先在三篇长帖试运行。</p>
+        </article>
+        <article class="card">
+          <span class="meta">频道调整 · 2026-10-25</span>
+          <h3>「城市散步」拆分出雨天替代线</h3>
+          <p>原路线帖中避雨节点信息过于分散，现独立成标签，便于按天气检索。已补录 4 条路线的室内节点。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-labelledby="fqTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="fqTitle">常见问题：关于频道、发帖与内容核实</h2>
+        <p>以下问题按新成员最常问的顺序排列。</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>「秋冬通勤配色」频道适合发什么类型的帖子？</summary>
+          <div class="answer"><p>适合发带条件的实穿记录：身高、体重、肤色、预算与穿着场景四项至少写三项。单纯晒图不带条件的帖子会被引导到「日常分享」区，不进主频道流。</p></div>
+        </details>
+        <details>
+          <summary>「底妆持妆时长」的测试标准是谁定的？</summary>
+          <div class="answer"><p>标准由频道主持周见微在 2026 年 8 月整理，参考了站内 40 篇测试帖的共同做法。核心是固定室温、湿度与上妆手法，每小时记录一次。该标准不是强制规范，作者可在帖首声明自己的定义。</p></div>
+        </details>
+        <details>
+          <summary>「单人养猫开销」里的医疗储备金额怎么估算？</summary>
+          <div class="answer"><p>多数帖子的做法是按一次普通门诊加检查的金额，按月平摊。以 10 月 30 日那篇记录为例，一次肠胃炎就诊合计 326 元，作者把储备设为每月 150 元。金额会因城市与医院等级不同而差异很大。</p></div>
+        </details>
+        <details>
+          <summary>「职场邮件措辞」的示例能否直接套用？</summary>
+          <div class="answer"><p>频道内统一标注为“场景示例”，不提供模板下载。同一句改写在不同岗位的有效性相反，行政与市场岗位反馈较好，研发项目组认为过于绕。使用时需对照自己的汇报关系与团队习惯。</p></div>
+        </details>
+        <details>
+          <summary>「城市散步路线」的避雨点信息如何核实？</summary>
+          <div class="answer"><p>每条路线的避雨点需由作者实地走过并拍照，标注具体楼层与营业时间。读者若发现信息变更，可在评论区指出，主持编辑会在 3 个工作日内复核并更新。</p></div>
+        </details>
+        <details>
+          <summary>「护肤品成分对照」的浓度区间来源是什么？</summary>
+          <div class="answer"><p>来源为产品包装成分表与品牌公开说明，帖子会标注批次。当品牌未公开浓度时，作者只能依据成分排序推测，此类推测在文中会明确标为“推测”，不与实测数据混排。</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关推荐 -->
+  <section class="section" id="tagcloud" aria-labelledby="tgTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Tags</span>
+        <h2 id="tgTitle">相关推荐：可以继续检索的具体词</h2>
+        <p>以下标签对应站内已有条目的关键词，点击进入该词的内容流。</p>
+      </div>
+      <div class="tagcloud">
+        <a href="/#picks">秋冬通勤配色案例</a>
+        <a href="/#picks">混油皮粉底暗沉</a>
+        <a href="/#latest">单人养猫月均开销</a>
+        <a href="/#latest">徐汇西岸散步路线</a>
+        <a href="/#deepdive">职场邮件措辞对照</a>
+        <a href="/#guide">小户型衣柜进深</a>
+        <a href="/#guide">一人食晚餐备菜</a>
+        <a href="/#reviews">烟酰胺浓度区间</a>
+        <a href="/#reviews">通勤鞋磨脚处理</a>
+        <a href="/#deepdive">书影共读提纲</a>
+        <a href="/#rank">十月收藏榜</a>
+        <a href="/#join">社群参与规则</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 加入方式 -->
+  <section class="section" id="join" aria-labelledby="jnTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Join</span>
+        <h2 id="jnTitle">加入方式与参与规则</h2>
+        <p>加入前请先读一遍以下四条，它们决定了帖子能否进入主频道流。</p>
+      </div>
+      <div class="grid g2">
+        <article class="card">
+          <h3>发帖三条硬性要求</h3>
+          <ul>
+            <li>写明场景与条件，至少包含时间、地点或自身参数中的两项。</li>
+            <li>引用他人内容需标注来源，包括帖子链接或截图出处。</li>
+            <li>涉及产品与就医经验时，区分“实测”“转述”“推测”三类信息。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>评论与修订的边界</h3>
+          <ul>
+            <li>评论可质疑结论，但需指向具体条目或数据，不针对作者本人。</li>
+            <li>作者可在 7 天内修订正文，修订记录公开可见。</li>
+            <li>超过 7 天的更正需在评论区说明，主持编辑会协助补充。</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-row">
+        <svg width="34" height="34" viewBox="0 0 64 64" role="img" aria-label="王冠形社区标志">
+          <rect width="64" height="64" rx="16" fill="#f3d9a4"/>
+          <path d="M15 44V23l9 11 4.5-7 4.5 7 9-11v21" fill="none" stroke="#5b2a6b" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        <span class="ftxt">女王社区vk</span>
+      </div>
+      <p>把日常经验写成可检索的条目，让后来的人按条件找到答案。</p>
+    </div>
+    <div>
+      <h3>频道入口</h3>
+      <ul>
+        <li><a href="/#picks">秋冬通勤配色</a></li>
+        <li><a href="/#picks">底妆持妆时长</a></li>
+        <li><a href="/#latest">单人养猫开销</a></li>
+        <li><a href="/#latest">城市散步路线</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>内容栏目</h3>
+      <ul>
+        <li><a href="/#deepdive">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#reviews">用户评论</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>参与</h3>
+      <ul>
+        <li><a href="/#join">加入方式</a></li>
+        <li><a href="/#join">参与规则</a></li>
+        <li><a href="/#rank">十月收藏榜</a></li>
+        <li><a href="/#news">规则变更记录</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-note">
+    <div class="footer-note-inner">
+      <span>站内条目、作者名与评论均为示例数据，用于展示频道结构与内容形态。</span>
+      <span>内容更新时间：2026-11-08 · 对应正文「最新更新」与「时间线」条目</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部" title="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"女王社区vk",
+  "description":"聚焦女性向兴趣与话题的社区型站点，提供频道导航、深度解析、体验指南与用户评论。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"「秋冬通勤配色」频道适合发什么类型的帖子？","acceptedAnswer":{"@type":"Answer","text":"适合发带条件的实穿记录：身高、体重、肤色、预算与穿着场景四项至少写三项。单纯晒图不带条件的帖子会被引导到日常分享区，不进主频道流。"}},
+    {"@type":"Question","name":"「底妆持妆时长」的测试标准是谁定的？","acceptedAnswer":{"@type":"Answer","text":"标准由频道主持周见微在2026年8月整理，参考站内40篇测试帖的共同做法。核心是固定室温、湿度与上妆手法，每小时记录一次。该标准不是强制规范，作者可在帖首声明自己的定义。"}},
+    {"@type":"Question","name":"「单人养猫开销」里的医疗储备金额怎么估算？","acceptedAnswer":{"@type":"Answer","text":"多数帖子按一次普通门诊加检查的金额按月平摊。以10月30日那篇记录为例，一次肠胃炎就诊合计326元，作者把储备设为每月150元。金额会因城市与医院等级不同而差异很大。"}},
+    {"@type":"Question","name":"「职场邮件措辞」的示例能否直接套用？","acceptedAnswer":{"@type":"Answer","text":"频道内统一标注为场景示例，不提供模板下载。同一句改写在不同岗位的有效性相反，行政与市场岗位反馈较好，研发项目组认为过于绕。使用时需对照自己的汇报关系与团队习惯。"}},
+    {"@type":"Question","name":"「城市散步路线」的避雨点信息如何核实？","acceptedAnswer":{"@type":"Answer","text":"每条路线的避雨点需由作者实地走过并拍照，标注具体楼层与营业时间。读者若发现信息变更可在评论区指出，主持编辑会在3个工作日内复核并更新。"}},
+    {"@type":"Question","name":"「护肤品成分对照」的浓度区间来源是什么？","acceptedAnswer":{"@type":"Answer","text":"来源为产品包装成分表与品牌公开说明，帖子会标注批次。当品牌未公开浓度时，作者只能依据成分排序推测，此类推测在文中会明确标为推测，不与实测数据混排。"}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var nav=document.getElementById('primaryNav');
+  if(toggle&&nav){
+    toggle.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.matchMedia('(max-width:980px)').matches){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var input=document.getElementById('siteSearch');
+  var feedback=document.getElementById('searchFeedback');
+  var index=[
+    {t:'秋冬通勤配色案例',id:'picks'},
+    {t:'底妆持妆时长测试',id:'picks'},
+    {t:'单人养猫开销记录',id:'latest'},
+    {t:'城市散步路线',id:'latest'},
+    {t:'职场邮件措辞对照',id:'deepdive'},
+    {t:'书影共读提纲',id:'deepdive'},
+    {t:'小户型收纳尺寸',id:'guide'},
+    {t:'独居晚餐备菜',id:'guide'},
+    {t:'护肤品成分对照',id:'reviews'},
+    {t:'通勤鞋磨脚处理',id:'reviews'},
+    {t:'社群参与规则',id:'join'},
+    {t:'十月收藏榜',id:'rank'},
+    {t:'用户评论',id:'reviews'},
+    {t:'常见问题',id:'faq'},
+    {t:'内容更新时间线',id:'timeline'},
+    {t:'规则变更记录',id:'news'}
+  ];
+  function esc(s){return s.replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function doSearch(){
+    var q=(input.value||'').trim();
+    if(!q){feedback.className='search-feedback';feedback.innerHTML='';return;}
+    var hits=index.filter(function(item){return item.t.indexOf(q)>-1;});
+    if(hits.length===0){
+      feedback.innerHTML='没有找到「<b>'+esc(q)+'</b>」相关条目，可试试“通勤配色”“养猫开销”“散步路线”。';
+    }else{
+      feedback.innerHTML='找到 '+hits.length+' 条：'+hits.slice(0,5).map(function(h){
+        return '<a href="/#'+h.id+'" style="display:inline-block;margin-right:10px">'+esc(h.t)+'</a>';
+      }).join('');
+    }
+    feedback.className='search-feedback show';
+  }
+  if(input){
+    input.addEventListener('input',doSearch);
+    input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doSearch();}});
+    document.addEventListener('click',function(e){
+      if(!e.target.closest('.search-box')){feedback.className='search-feedback';}
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>520){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var navLinks=document.querySelectorAll('.primary-nav a');
+  var sectionIds=['overview','channels','picks','latest','deepdive','guide','faq'];
+  function highlight(){
+    var pos=window.scrollY+140;
+    var current='';
+    sectionIds.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el&&el.offsetTop<=pos){current=id;}
+    });
+    navLinks.forEach(function(a){
+      var href=a.getAttribute('href')||'';
+      if(current&&href==='/\#'+current){a.style.background='#f2ecf5';a.style.color='#3d1b49';}
+      else{a.style.background='';a.style.color='';}
+    });
+  }
+  window.addEventListener('scroll',highlight,{passive:true});
+  highlight();
+})();
+</script>
+</body>
+        </html>
